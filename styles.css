@@ -1,0 +1,162 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%; /* Ensure at least 100% of viewport height */
+  overflow:unset; /* Allow scrolling */
+
+  /* Gradient background for login page */
+  background: linear-gradient(120deg, #4d006b, #d0314c);
+}
+
+.center, .registration-center {
+  margin-top: 10%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 29vw;
+  background: white;
+  border-radius: 10px;
+}
+.registration-center {
+  margin-top: 30%;
+}
+.center h1, .registration-center h1 {
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.center form, .registration-center form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+form .txt_field, .registration-txt-field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+
+.txt_field input, .registration-txt-field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label, .registration-txt-field label {
+  position: absolute;
+  top: 20px; /* Adjusted the top position */
+  left: 5px;
+  color: #adadad;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.txt_field span::before, .registration-txt-field span::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label,
+.registration-txt-field input:focus ~ label,
+.registration-txt-field input:valid ~ label {
+  top: 0px;
+  color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:Valid ~ span::before,
+.registration-txt-field input:focus ~ span::before,
+.registration-txt-field input:Valid ~ span::before {
+  width: 100%;
+}
+
+.pass {
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+
+.pass:hover {
+  text-decoration: underline;
+}
+
+input[type="Submit"], input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input[type="Submit"]:hover, input[type="submit"]:hover {
+  background: #2691d9;
+  color: #e9f4fb;
+  transition: .5s;
+}
+
+.signup_link, .registration-signup-link {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+
+.signup_link a, .registration-signup-link a {
+  color: #2691d9;
+  text-decoration: none;
+}
+
+.register a:hover, .registration-signup-link a:hover {
+  text-decoration: underline;
+}
+
+.HomeAbout {
+  width: 100vw;
+  height: 25vh;
+}
+
+.labelspace {
+  margin-bottom: 10px; /* Adjust as needed to provide space between label and input */
+}
+.register-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.5s, color 0.5s;
+  text-decoration: none;
+  color: #000; /* Change the color as needed */
+}
+
+.register-button:hover {
+  background: #2691d9;
+  color: #e9f4fb;
+}
